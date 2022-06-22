@@ -1,0 +1,19 @@
+{
+  "name": "dashboard-tutorial",
+  "version": "1.0.0",
+  "description": "Monolith Dashboard for Chapter 8 Topic 2 on Fullstack Web Course",
+  "main": "index.js",
+  "author": "Fikri Rahmat Nurhidayat <fnurhidayat@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.1",
+    "moment": "^2.27.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  }
+}
