@@ -1,36 +1,36 @@
-const express = require('express')
-const expressLayout = require('express-ejs-layouts')
-const app = express()
-const { PORT = 8000 } = process.env
+const express = require("express");
+const expressLayout = require("express-ejs-layouts");
+const app = express();
+const { PORT = 8000 } = process.env;
 
 // View Engine
-app.use(express.static('public'))
-app.set('view engine', 'ejs')
-app.use(expressLayout)
-app.set('layout', 'layouts/default')
+app.use(express.static("public"));
+app.set("view engine", "ejs");
+app.use(expressLayout);
+app.set("layout", "layouts/default");
 
 // Parser
-app.use(express.urlencoded({ extended: false }))
-app.use(express.json())
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 // Session
-const session = require('express-session')
+const session = require("express-session");
 app.use(
   session({
-    secret: 'Rahasia',
+    secret: "Rahasia",
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
   })
-)
+);
 
 // Passport
-const passport = require('./lib/passport') 
-app.use(passport.initialize())
-app.use(passport.session())
+const passport = require("./lib/passport");
+app.use(passport.initialize());
+app.use(passport.session());
 
-const router = require('./router')
-app.use(router)
+const router = require("./router");
+app.use(router);
 
 app.listen(PORT, () => {
-  console.log(`Listening on http://localhost:${PORT}`)
-})
+  console.log(`Listening on http://localhost:${PORT}`);
+});

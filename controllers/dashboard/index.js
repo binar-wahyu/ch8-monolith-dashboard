@@ -5,15 +5,15 @@ module.exports = {
         {
           Post: 10,
           Visitor: 100,
-          Reader: 90
-        }
+          Reader: 90,
+        },
       ],
-      contentName: 'Statistic',
-      layout: 'layouts/dashboard',
-    }
+      contentName: "Statistic",
+      layout: "layouts/dashboard",
+    };
 
-    res.render('pages/dashboard/home', locals)
+    res.render("pages/dashboard/home", locals);
   },
 
-  post: require('./post')
-}
+  post: require("./post"),
+};
